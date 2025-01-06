@@ -1,0 +1,71 @@
+@font-face {
+    font-family: 'Georgia Pro';
+    src: url(fonts/georgia-pro-cond/GeorgiaPro-Black.ttf) format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Georgia Pro';
+    src: url(fonts/georgia-pro-cond/GeorgiaPro-CondSemiBoldItalic.ttf) format('truetype');
+    font-weight: 'cond semibold italic';
+}
+
+*{
+margin: 0;
+padding: 0;
+list-style: none;
+box-sizing: border-box;
+}
+
+.showcase{
+    position: absolute;
+    right: 0;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    z-index: 2;
+}
+
+.showcase h1{
+    font-family: 'Georgia Pro', sans-serif;
+    font-weight: 'cond semibold italic';
+}
+
+.showcase video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+    z-index: -2;
+}
+
+.logo
+{
+    width: 400;
+    height: 250;
+}
+
+.social
+{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    bottom: 0;
+    left: 0;
+}
+.social img
+{
+    width: 50;
+    height: 50;
+}
