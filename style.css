@@ -22,7 +22,7 @@ box-sizing: border-box;
     position: absolute;
     height: 80%;
     width: 100%;
-    background-color: aqua;
+    z-index: 10;
 }
 
 .showcase{
