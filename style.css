@@ -57,11 +57,23 @@ box-sizing: border-box;
     z-index: -5;
 }
 
+.standardBackground
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1;
+    z-index: 0;
+}
+
 .showcase video{
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: auto;
     height: 100%;
     object-fit: cover;
     opacity: 1;
@@ -109,4 +121,24 @@ box-sizing: border-box;
 {
     font-size: 80px;
     color: white;
+}
+
+.foodmenu
+{
+    position: fixed;
+    width: 55%;
+    height: 100%;
+    rotate: 15deg;
+    left: 34%;
+    top: 18%;
+    overflow: auto;
+    z-index: 5;
+}
+
+.backarrow
+{
+    position: fixed;
+    left: 20px;
+    bottom: 15px;
+    
 }
