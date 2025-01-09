@@ -1,11 +1,13 @@
 let menuState = false;
 
+
 window.onload=function(){
 const myOverlay = document.querySelector ("#menuButton");
-const backButt = document.querySelector("backarrow")
+const foodButton = document.querySelector("#foodButton");
 
 myOverlay.addEventListener("click", openMenu);
-backButt.addEventListener("hover", buttHover);
+
+foodButton.addEventListener("click", createFood);
 }
 
 function openMenu() {
@@ -22,6 +24,12 @@ function openMenu() {
     }
 }
 
-function buttHover(){
-    document.getElementsByClassName("backarrow").src = "backarrow_hvr.png";
+function createFood() {
+    let foodMenu = document.getElementById("foodlist").getElementsByTagName("ul")[0];
+    let newList = document.createElement("li");
+    let newFood = document.createElement("p");
+    foodMenu.appendChild(newList);
+    newList.appendChild(newFood);
+    newFood.innerHTML = "Dit is voor eten";
 }
+
