@@ -19,7 +19,7 @@ jobs:
           $ServerHost = "${{ vars.SERVER_HOST }}"
           $ServerUser = "${{ vars.SERVER_USER }}"
           $ServerPath = "${{ vars.SERVER_PATH }}"
-          $KeyPath = "C:\keys\id_rsa"
+          $KeyPath = "C:\Users\flori\.ssh\id_rsa"
           $SourcePath = "${{ github.workspace }}\*"
           $RemotePath = "$($ServerUser)@$($ServerHost):$($ServerPath)"
           scp -i $KeyPath -r $SourcePath $RemotePath
