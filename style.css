@@ -17,6 +17,14 @@ list-style: none;
 box-sizing: border-box;
 }
 
+img
+{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 5;
+}
+
 .overlay
 {
     position: absolute;
@@ -143,7 +151,18 @@ box-sizing: border-box;
     
 }
 
-.div1
+.foodType
 {
-    z-index: 100;
+    position: absolute;
+    left: 150px;
+    top: 150px;
+    width: 20%;
+    height: 100%;
+    rotate: 15deg;
+    z-index: 5;
+    font-family: "Georgia Pro", sans-serif;
+    font-size: 50;
+    flex-direction: column;
+    display: flex;
+    cursor: pointer;
 }
