@@ -18,12 +18,17 @@ box-sizing: border-box;
 overflow: hidden;
 }
 
-.cart
+#cart
 {
     position: absolute;
     bottom: 10px;
     right: 10px;
     z-index: 5;
+}
+
+#overlay_cart
+{
+    display: block;
 }
 
 .overlay
@@ -61,7 +66,7 @@ overflow: hidden;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: fill;
     opacity: 1;
     z-index: -5;
 }
@@ -73,9 +78,20 @@ overflow: hidden;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: fill;
     opacity: 1;
     z-index: 0;
+    background-color: hsla(0, 0%, 0%, 0.5);
+}
+
+.chefbackground
+{
+    position: absolute;
+    object-fit:contain;
+    top: -30%;
+    right: -10%;
+    opacity: 1;
+    z-index: 1;
 }
 
 .showcase video{
@@ -84,7 +100,35 @@ overflow: hidden;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: fill;
+    opacity: 1;
+    z-index: -2;
+}
+
+.orderscreen
+{
+    position: absolute;
+    right: 0;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    background-color: black;
+    color: white;
+    z-index: 2; 
+}
+
+.orderscreen video
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
     opacity: 1;
     z-index: -2;
 }
@@ -134,12 +178,12 @@ overflow: hidden;
 
 .foodmenu
 {
-    position: fixed;
+    position: absolute;
     width: 55%;
     height: 100%;
+    left: 45%;
+    top: 20%;
     rotate: 15deg;
-    left: 34%;
-    top: 18%;
     overflow: auto;
     z-index: 5;
 }
@@ -149,28 +193,56 @@ overflow: hidden;
     position: fixed;
     left: 20px;
     bottom: 15px;
+    z-index: 5;
     
 }
 
-.foodType
+.foodtype
 {
     position: absolute;
-    left: -1px;
-    top: 15px;
-    width: 50%;
-    height: 100%;
+    left: -25%;
+    top: -20%;
+    width: 60%;
+    height: 200%;
     rotate: 15deg;
     z-index: 5;
-    font-family: "Georgia Pro", sans-serif;
-    font-size: 50;
     flex-direction: column;
     display: flex;
     cursor: pointer;
     background-color: rgba(241, 32, 73, 1);
+    opacity: 0.9;
 }
 
 .foodtype ul
 {
+    position: absolute;
     right: 0px;
-    top: 0px;
+    top: 10%;
+    padding: 15px;
+    opacity: 1;
+    font-family: "Georgia Pro", sans-serif;
+    font-size: 300%;
+}
+
+.line-1
+{
+    position: absolute;
+    top: 5%;
+    height: 1px;
+    width: 110vw;
+    background-color: white;
+    z-index: 100;
+    rotate: 15deg;
+}
+ 
+.line-2
+{
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    height: 1px;
+    width: 110vw;
+    background-color: white;
+    z-index: 100;
+    rotate: 105deg;
 }
