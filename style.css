@@ -15,9 +15,10 @@ margin: 0;
 padding: 0;
 list-style: none;
 box-sizing: border-box;
+overflow: hidden;
 }
 
-img
+.cart
 {
     position: absolute;
     bottom: 10px;
@@ -154,9 +155,9 @@ img
 .foodType
 {
     position: absolute;
-    left: 150px;
-    top: 150px;
-    width: 20%;
+    left: -1px;
+    top: 15px;
+    width: 50%;
     height: 100%;
     rotate: 15deg;
     z-index: 5;
@@ -165,4 +166,11 @@ img
     flex-direction: column;
     display: flex;
     cursor: pointer;
+    background-color: rgba(241, 32, 73, 1);
+}
+
+.foodtype ul
+{
+    right: 0px;
+    top: 0px;
 }
