@@ -3,7 +3,8 @@ let pizzaMenu = 0;
 let vegaMenu = 0;
 let drankMenu = 0;
 let desertMenu = 0;
-
+//array with the cart of items.
+//matrix with the item data --> https://www.youtube.com/watch?v=SmJNeJuLmVo&ab_channel=BroCode
 
 
 window.onload=function(){
@@ -13,6 +14,8 @@ window.onload=function(){
     const typeVega = document.getElementById("type2");
     const typeDrank = document.getElementById("type3");
     const typeDesert = document.getElementById("type4");
+    const overlayCart = document.getElementById("overlay_cart");
+    const cart = document.getElementById("cart");
     
     foodButton.addEventListener("click", function()
     {
@@ -40,6 +43,8 @@ window.onload=function(){
     typeVega.addEventListener("click", function(){ typeID = 2; switchType()});
     typeDrank.addEventListener("click", function(){ typeID = 3; switchType()});
     typeDesert.addEventListener("click", function(){ typeID = 4; switchType()});
+
+    cart.addEventListener("click", openCart());
 }
 
 function createFood() {
@@ -80,6 +85,21 @@ function switchType()
         createFood();
     }
 
+}
+
+openCart()
+{
+    //function to open the cart overlay
+}
+
+closeCart()
+{
+    //function to close the cart overlay
+}
+
+sendOrder()
+{
+    //function to send the order to the pizzeria
 }
 
 

@@ -7,15 +7,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section class="showcase">
+    <section class="orderscreen">
         <video src="backgroundvid.mp4" muted loop autoplay></video>
+        <img class= "chefbackground" src="chef_background.png" alt="chef in the background">
         <img class="standardBackground" src="bestellen_background.png" alt="Menu background">
+        <div class="line-1"></div>
+        <div class="line-2">
+            <p>Bestellen</p>
+        </div>
         <div class="foodtype"> 
             <ul>
-                <li class="foodPizza" id="type1">Pizza's</li>
-                <li class="foodVega" id="type2">Vegetarisch</li>
-                <li class="foodDrank" id="type3">Drank</li>
-                <li class="foodDesert" id="type4">Desert</li>
+                <li id="type1">Pizza's</li>
+                <li id="type2">Vegetarisch</li>
+                <li id="type3">Drank</li>
+                <li id="type4">Desert</li>
             </ul>
         </div>
         <div class ="foodmenu" id="foodlist">
@@ -23,10 +28,11 @@
             <ul>
             </ul>
         </div>
-        <img class="cart" src="shoppingcart.png" alt="pictogram winkelwagen">
+        <img id="cart" src="shoppingcart.png" alt="pictogram winkelwagen">
         <a href="index.html"><img class="backarrow" src="backarrow_std.png" alt="Go back to main menu."></a>
     </section>
- 
+
+    <div id="overlay_cart"></div>
 
     <script src="bestellen_script.js"></script>
 </body>
