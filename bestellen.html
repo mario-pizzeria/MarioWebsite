@@ -11,10 +11,10 @@
         <video src="backgroundvid.mp4" muted loop autoplay></video>
         <img class= "chefbackground" src="chef_background.png" alt="chef in the background">
         <img class="standardBackground" src="bestellen_background.png" alt="Menu background">
+        <div class="backgroundhue"></div>
         <div class="line-1"></div>
-        <div class="line-2">
-            <p>Bestellen</p>
-        </div>
+        <div class="line-2"></div>
+        <div><p class="numberbackground">02</p><p class="textbackground">Bestellen</p></div>
         <div class="foodtype"> 
             <ul>
                 <li id="type1">Pizza's</li>
@@ -25,14 +25,22 @@
         </div>
         <div class ="foodmenu" id="foodlist">
             <button id="foodButton"> Create Fooddd!</button>
-            <ul>
+            <ul class="fooddisplay">
             </ul>
         </div>
         <img id="cart" src="shoppingcart.png" alt="pictogram winkelwagen">
         <a href="index.html"><img class="backarrow" src="backarrow_std.png" alt="Go back to main menu."></a>
     </section>
 
-    <div id="overlay_cart"></div>
+    <div id="overlay_cart">
+        <p>Bestelling:</p>
+        <ul>
+
+        </ul>
+        <p>Totaal Prijs:</p>
+        <button>Bestellen</button>
+        <button>X</button>
+    </div>
 
     <script src="bestellen_script.js"></script>
 </body>
