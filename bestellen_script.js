@@ -3,6 +3,10 @@ let pizzaMenu = 0;
 let vegaMenu = 0;
 let drankMenu = 0;
 let desertMenu = 0;
+let cartOpen = false;
+let x = 1;
+let appel = "Appeltje ";
+ 
 //array with the cart of items.
 //matrix with the item data --> https://www.youtube.com/watch?v=SmJNeJuLmVo&ab_channel=BroCode
 
@@ -14,7 +18,6 @@ window.onload=function(){
     const typeVega = document.getElementById("type2");
     const typeDrank = document.getElementById("type3");
     const typeDesert = document.getElementById("type4");
-    const overlayCart = document.getElementById("overlay_cart");
     const cart = document.getElementById("cart");
     
     foodButton.addEventListener("click", function()
@@ -23,37 +26,76 @@ window.onload=function(){
             case 1:
                 pizzaMenu += 1; 
                 createFood();
+                x++;
                 break;
             case 2:
                 vegaMenu += 1; 
                 createFood();
+                x++
                 break;
             case 3:
                 drankMenu += 1; 
                 createFood();
+                x++;
                 break;
             case 4:
                 desertMenu += 1; 
                 createFood();
+                x++;
                 break;
         }   
     });
 
-    typePizza.addEventListener("click", function(){ typeID = 1; switchType()});
-    typeVega.addEventListener("click", function(){ typeID = 2; switchType()});
-    typeDrank.addEventListener("click", function(){ typeID = 3; switchType()});
-    typeDesert.addEventListener("click", function(){ typeID = 4; switchType()});
-
-    cart.addEventListener("click", openCart());
+    typePizza.addEventListener("click", 
+        function(){
+            typeID = 1;
+            document.getElementById("type1").style.color="rgb(0, 0, 0)";
+            document.getElementById("type2").style.setProperty("color", "rgb(255, 255, 255)");
+            document.getElementById("type3").style.setProperty("color", "rgb(255, 255, 255)");
+            document.getElementById("type4").style.setProperty("color", "rgb(255, 255, 255)");
+            switchType()
+        });
+    typeVega.addEventListener("click",
+        function(){ 
+            typeID = 2;
+            document.getElementById("type2").style.setProperty("color", "rgb(0, 0, 0)");
+            document.getElementById("type1").style.setProperty("color", "rgb(255, 255, 255)");
+            document.getElementById("type3").style.setProperty("color", "rgb(255, 255, 255)");
+            document.getElementById("type4").style.setProperty("color", "rgb(255, 255, 255)");
+            switchType()
+        });
+    typeDrank.addEventListener("click", 
+        function(){ 
+            typeID = 3;
+            document.getElementById("type3").style.setProperty("color", "rgb(0, 0, 0)");
+            document.getElementById("type1").style.setProperty("color", "rgb(255, 255, 255)");
+            document.getElementById("type2").style.setProperty("color", "rgb(255, 255, 255)");
+            document.getElementById("type4").style.setProperty("color", "rgb(255, 255, 255)");
+            switchType()
+        });
+    typeDesert.addEventListener("click", 
+        function(){
+            typeID = 4;
+            document.getElementById("type4").style.setProperty("color", "rgb(0, 0, 0)");
+            document.getElementById("type1").style.setProperty("color", "rgb(255, 255, 255)");
+            document.getElementById("type2").style.setProperty("color", "rgb(255, 255, 255)");
+            document.getElementById("type3").style.setProperty("color", "rgb(255, 255, 255)");
+            switchType()
+        });
+    cart.addEventListener("click", openCart);
 }
 
 function createFood() {
     let foodMenu = document.getElementById("foodlist").getElementsByTagName("ul")[0];
     let newList = document.createElement("li");
     let newFood = document.createElement("p");
+    let newButton = document.createElement("button");
     foodMenu.appendChild(newList);
     newList.appendChild(newFood);
-    newFood.innerHTML = "Dit is voor eten";
+    newList.appendChild(newButton);
+    newFood.innerHTML = appel + x + " $" + x + "," + x + x;
+    newButton.innerHTML = "+";
+    newButton.addEventListener("click", addItem);
 }
 
 function switchType()
@@ -87,19 +129,28 @@ function switchType()
 
 }
 
-openCart()
+function openCart()
 {
-    //function to open the cart overlay
+    if(openCart)
+    {
+        document.getElementById("overlay_cart").style.display='none';
+        openCart = false;
+    }
+    else
+    {
+        document.getElementById("overlay_cart").style.display='inline';
+        openCart = true;
+    }
 }
 
-closeCart()
-{
-    //function to close the cart overlay
-}
-
-sendOrder()
+function sendOrder()
 {
     //function to send the order to the pizzeria
+}
+
+function addItem()
+{
+
 }
 
 
