@@ -5,7 +5,6 @@ let drankMenu = 0;
 let desertMenu = 0;
 let cartOpen = false;
 let x = 1;
-let appel = "Appeltje ";
  
 //array with the cart of items.
 //matrix with the item data --> https://www.youtube.com/watch?v=SmJNeJuLmVo&ab_channel=BroCode
@@ -13,38 +12,11 @@ let appel = "Appeltje ";
 
 window.onload=function(){
 
-    const foodButton = document.getElementById("foodButton");
     const typePizza = document.getElementById("type1");
     const typeVega = document.getElementById("type2");
     const typeDrank = document.getElementById("type3");
     const typeDesert = document.getElementById("type4");
     const cart = document.getElementById("cart");
-    
-    foodButton.addEventListener("click", function()
-    {
-        switch(typeID) {
-            case 1:
-                pizzaMenu += 1; 
-                createFood();
-                x++;
-                break;
-            case 2:
-                vegaMenu += 1; 
-                createFood();
-                x++
-                break;
-            case 3:
-                drankMenu += 1; 
-                createFood();
-                x++;
-                break;
-            case 4:
-                desertMenu += 1; 
-                createFood();
-                x++;
-                break;
-        }   
-    });
 
     typePizza.addEventListener("click", 
         function(){
@@ -143,15 +115,6 @@ function openCart()
     }
 }
 
-function sendOrder()
-{
-    //function to send the order to the pizzeria
-}
-
-function addItem()
-{
-
-}
 
 
 
