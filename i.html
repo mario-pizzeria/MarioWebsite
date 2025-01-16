@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzeria Bestelling</title>
+</head>
+<body>
+    <h2>Pizzeria Bestelling</h2>
+    <form action="bestelling.php" method="POST">
+        <fieldset>
+            <legend>Klantgegevens</legend>
+            <label for="naam">Naam:</label><br>
+            <input type="text" id="naam" name="naam" required><br><br>
+            <label for="telefoonnummer">Telefoonnummer:</label><br>
+            <input type="text" id="telefoonnummer" name="telefoonnummer" required><br><br>
+        </fieldset>
+        <fieldset>
+            <legend>Bestelgegevens</legend>
+            <label for="product_1">Aantal Margherita:</label><br>
+            <input type="number" id="product_1" name="product_1" value="0" min="0"><br><br>
+
+            <label for="product_2">Aantal Pepperoni:</label><br>
+            <input type="number" id="product_2" name="product_2" value="0" min="0"><br><br>
+
+            <label for="product_3">Aantal Quattro Formaggi:</label><br>
+            <input type="number" id="product_3" name="product_3" value="0" min="0"><br><br>
+
+            <label for="product_3">Aantal Hawaï:</label><br>
+            <input type="number" id="product_4" name="product_4" value="0" min="0"><br><br>
+
+            <label for="product_3">Aantal Vegan Special:</label><br>
+            <input type="number" id="product_5" name="product_5" value="0" min="0"><br><br>
+
+            <label for="product_3">Aantal Coca-Cola:</label><br>
+            <input type="number" id="product_6" name="product_6" value="0" min="0"><br><br>
+
+            <label for="product_3">Aantal Fanta:</label><br>
+            <input type="number" id="product_7" name="product_7" value="0" min="0"><br><br>
+
+            <label for="product_3">Aantal Sprite:</label><br>
+            <input type="number" id="product_8" name="product_8" value="0" min="0"><br><br>
+
+            <label for="product_3">Aantal Tiramisu:</label><br>
+            <input type="number" id="product_9" name="product_9" value="0" min="0"><br><br>
+
+            <label for="product_3">Aantal Panna Cotta:</label><br>
+            <input type="number" id="product_10" name="product_10" value="0" min="0"><br><br>
+        </fieldset>
+        <input type="submit" value="Bestellen">
+    </form>
+</body>
+</html>
