@@ -115,8 +115,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <form action="bestelling.php" method="POST">
 
             <div class ="foodmenu">
-                <fieldset>
-                    <legend>Pizza's</legend>
                     <label for="product_1">Aantal Margherita:</label><br>
                     <input type="number" id="product_1" name="product_1" value="0" min="0"><br><br>
 
@@ -131,43 +129,30 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
 
             <div class ="foodmenu">
-                <fieldset>
-                <legend>Vegetarisch</legend>
-
                 <label for="product_3">Aantal Vegan Special:</label><br>
                 <input type="number" id="product_5" name="product_5" value="0" min="0"><br><br>
-                </fieldset>
             </div>
 
             <div class ="foodmenu">
-                <fieldset>
-                    <legend>Drank</legend>
+                <label for="product_3">Aantal Coca-Cola:</label><br>
+                <input type="number" id="product_6" name="product_6" value="0" min="0"><br><br>
 
-                    <label for="product_3">Aantal Coca-Cola:</label><br>
-                    <input type="number" id="product_6" name="product_6" value="0" min="0"><br><br>
+                <label for="product_3">Aantal Fanta:</label><br>
+                <input type="number" id="product_7" name="product_7" value="0" min="0"><br><br>
 
-                    <label for="product_3">Aantal Fanta:</label><br>
-                    <input type="number" id="product_7" name="product_7" value="0" min="0"><br><br>
-
-                    <label for="product_3">Aantal Sprite:</label><br>
-                    <input type="number" id="product_8" name="product_8" value="0" min="0"><br><br>
-                </fieldset>
+                <label for="product_3">Aantal Sprite:</label><br>
+                <input type="number" id="product_8" name="product_8" value="0" min="0"><br><br>
             </div>
             
             <div class ="foodmenu" id="foodlist">
-                <fieldset>
-                <legend>Desert</legend>
-
                 <label for="product_3">Aantal Tiramisu:</label><br>
                 <input type="number" id="product_9" name="product_9" value="0" min="0"><br><br>
 
                 <label for="product_3">Aantal Panna Cotta:</label><br>
                 <input type="number" id="product_10" name="product_10" value="0" min="0"><br><br>
-                </fieldset>
             </div>
 
             <div id="overlay_cart">
-                <img src="overlaybackground.png" alt="">
                 <h1>Bestelling:</h1>
                 <legend>Klantgegevens</legend>
                 <label for="naam">Naam:</label><br>
@@ -286,8 +271,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     {
         if(openCart)
         {
+            let list = document.getElementById("productenlijst");
             document.getElementById("overlay_cart").style.display='none';
             openCart = false;
+            list.removeChild(list.firstChild);
         }
         else
         {
@@ -312,20 +299,200 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         let tiramisu = document.getElementById("product_9");
         let pannacotta = document.getElementById("product_10");
 
-        let totalPrice = document.getElementById("totalPrice");
+        let totalPrice = 0;
 
         if(margherita.value > 0)
+        {
+            let newProduct = document.createElement("li");
+            newProduct.className = 'productlist';
+            let newName = document.createElement("p");
+            let newPrice = document.createElement("p");
+            let newCount = document.createElement("p");
+            newName.innerHTML = "Pizza Margherita";
+            newPrice.innerHTML = "€8,50";
+            newCount.innerHTML = margherita.value + "x";
+            list.appendChild(newProduct);
+            newProduct.appendChild(newName);
+            newProduct.appendChild(newPrice);
+            newProduct.appendChild(newCount);
+            for(let i = 0; i < margherita.value; i++)
             {
-                let newProduct = document.createElement("li");
-                let newName = document.createElement("p");
-                let newPrice = document.createElement("p");
-                let newCount = document.createElement("p");
-                newName.innerHTML = "Margherita";
-                newPrice.innerHTML = "€8,50";
-                newCount.innerHTML = margherita.value;
-                list.appendChild(newProduct);
-                newProduct.appendChild(newName);
+                totalPrice = totalPrice + 8.50;
             }
+        }
+        if(pepperoni.value > 0)
+        {
+            let newProduct = document.createElement("li");
+            newProduct.className = 'productlist';
+            let newName = document.createElement("p");
+            let newPrice = document.createElement("p");
+            let newCount = document.createElement("p");
+            newName.innerHTML = "Pizza Pepperoni";
+            newPrice.innerHTML = "€10,00";
+            newCount.innerHTML = pepperoni.value + "x";
+            list.appendChild(newProduct);
+            newProduct.appendChild(newName);
+            newProduct.appendChild(newPrice);
+            newProduct.appendChild(newCount);
+            for(let i = 0; i < pepperoni.value; i++)
+            {
+                totalPrice = totalPrice + 10.00;
+            }
+        }
+        if(quattro.value > 0)
+        {
+            let newProduct = document.createElement("li");
+            newProduct.className = 'productlist';
+            let newName = document.createElement("p");
+            let newPrice = document.createElement("p");
+            let newCount = document.createElement("p");
+            newName.innerHTML = "Pizza Quattro Formaggi";
+            newPrice.innerHTML = "€12,00";
+            newCount.innerHTML = quattro.value + "x";
+            list.appendChild(newProduct);
+            newProduct.appendChild(newName);
+            newProduct.appendChild(newPrice);
+            newProduct.appendChild(newCount);
+            for(let i = 0; i < quattro.value; i++)
+            {
+                totalPrice = totalPrice + 12.00;
+            }
+        }
+        if(hawai.value > 0)
+        {
+            let newProduct = document.createElement("li");
+            newProduct.className = 'productlist';
+            let newName = document.createElement("p");
+            let newPrice = document.createElement("p");
+            let newCount = document.createElement("p");
+            newName.innerHTML = "Pizza Hawaï";
+            newPrice.innerHTML = "€9,50";
+            newCount.innerHTML = hawai.value + "x";
+            list.appendChild(newProduct);
+            newProduct.appendChild(newName);
+            newProduct.appendChild(newPrice);
+            newProduct.appendChild(newCount);
+            for(let i = 0; i < hawai.value; i++)
+            {
+                totalPrice = totalPrice + 9.50;
+            }
+        }
+        if(veganspecial.value > 0)
+        {
+            let newProduct = document.createElement("li");
+            newProduct.className = 'productlist';
+            let newName = document.createElement("p");
+            let newPrice = document.createElement("p");
+            let newCount = document.createElement("p");
+            newName.innerHTML = "Pizza Vegan Special";
+            newPrice.innerHTML = "€11,00";
+            newCount.innerHTML = veganspecial.value + "x";
+            list.appendChild(newProduct);
+            newProduct.appendChild(newName);
+            newProduct.appendChild(newPrice);
+            newProduct.appendChild(newCount);
+            for(let i = 0; i < veganspecial.value; i++)
+            {
+                totalPrice = totalPrice + 11.00;
+            }
+        }
+        if(cocacola.value > 0)
+        {
+            let newProduct = document.createElement("li");
+            newProduct.className = 'productlist';
+            let newName = document.createElement("p");
+            let newPrice = document.createElement("p");
+            let newCount = document.createElement("p");
+            newName.innerHTML = "Coca-Cola";
+            newPrice.innerHTML = "€2,50";
+            newCount.innerHTML = cocacola.value + "x";
+            list.appendChild(newProduct);
+            newProduct.appendChild(newName);
+            newProduct.appendChild(newPrice);
+            newProduct.appendChild(newCount);
+            for(let i = 0; i < cocacola.value; i++)
+            {
+                totalPrice = totalPrice + 2.50;
+            }
+        }
+        if(fanta.value > 0)
+        {
+            let newProduct = document.createElement("li");
+            newProduct.className = 'productlist';
+            let newName = document.createElement("p");
+            let newPrice = document.createElement("p");
+            let newCount = document.createElement("p");
+            newName.innerHTML = "Fanta";
+            newPrice.innerHTML = "€2,50";
+            newCount.innerHTML = fanta.value + "x";
+            list.appendChild(newProduct);
+            newProduct.appendChild(newName);
+            newProduct.appendChild(newPrice);
+            newProduct.appendChild(newCount);
+            for(let i = 0; i < fanta.value; i++)
+            {
+                totalPrice = totalPrice + 2.50;
+            }
+        }
+        if(sprite.value > 0)
+        {
+            let newProduct = document.createElement("li");
+            newProduct.className = 'productlist';
+            let newName = document.createElement("p");
+            let newPrice = document.createElement("p");
+            let newCount = document.createElement("p");
+            newName.innerHTML = "Sprite";
+            newPrice.innerHTML = "€2,50";
+            newCount.innerHTML = sprite.value + "x";
+            list.appendChild(newProduct);
+            newProduct.appendChild(newName);
+            newProduct.appendChild(newPrice);
+            newProduct.appendChild(newCount);
+            for(let i = 0; i < sprite.value; i++)
+            {
+                totalPrice = totalPrice + 2.50;
+            }
+        }
+        if(tiramisu.value > 0)
+        {
+            let newProduct = document.createElement("li");
+            newProduct.className = 'productlist';
+            let newName = document.createElement("p");
+            let newPrice = document.createElement("p");
+            let newCount = document.createElement("p");
+            newName.innerHTML = "Tiramisu";
+            newPrice.innerHTML = "€5,00";
+            newCount.innerHTML = tiramisu.value + "x";
+            list.appendChild(newProduct);
+            newProduct.appendChild(newName);
+            newProduct.appendChild(newPrice);
+            newProduct.appendChild(newCount);
+            for(let i = 0; i < tiramisu.value; i++)
+            {
+                totalPrice = totalPrice + 5.00;
+            }
+        }
+        if(pannacotta.value > 0)
+        {
+            let newProduct = document.createElement("li");
+            newProduct.className = 'productlist';
+            let newName = document.createElement("p");
+            let newPrice = document.createElement("p");
+            let newCount = document.createElement("p");
+            newName.innerHTML = "Panna Cotta";
+            newPrice.innerHTML = "€5,50";
+            newCount.innerHTML = pannacotta.value + "x";
+            list.appendChild(newProduct);
+            newProduct.appendChild(newName);
+            newProduct.appendChild(newPrice);
+            newProduct.appendChild(newCount);
+            for(let i = 0; i < pannacotta.value; i++)
+            {
+                totalPrice = totalPrice + 5.50;
+            }
+        }
+
+        document.getElementById("totalPrice").innerHTML= "€" + totalPrice;
     }
 
     </script>
