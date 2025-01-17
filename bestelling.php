@@ -2,8 +2,8 @@
 
 $host = '127.0.0.1';
 $db = 'mariopizzeria';
-$user = 'root';
-$pass = '';
+$user = 'extra';
+$pass = 'Frikandel@1';
 $charset = 'utf8mb4';
 
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
