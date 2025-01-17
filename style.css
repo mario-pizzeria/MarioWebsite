@@ -206,17 +206,24 @@
     position: absolute;
     top: 0;
     right: 25;
-    width: 50%;
     display: flex;
     justify-content: space-between;
     align-items:start;
     flex-direction: column;
     z-index: -5;
+    overflow: visible;
+}
+
+.Menu ul
+{
+    width: 55vw;
+    height: 100vh;
 }
 
 .Menu a 
 {
-    font-size: 80px;
+    font-family: 'Georgia Pro', sans-serif;
+    font-size: 5vw;
     color: white;
 }
 
@@ -354,4 +361,179 @@
     color: white;
     font-family: "Georgia Pro", sans-serif;
     font-size: 2vw;
+}
+
+#Reserveer
+{
+    position: absolute;
+    top: 7vh;
+    left: 1vw;
+    rotate: 5deg;
+    overflow: visible;
+}
+
+#Reserveer a
+{
+    position: absolute;
+    text-decoration: none;
+}
+
+#Purple
+{
+    position: absolute;
+    left: -10vw;
+    top: -2vh;
+    z-index: -1;
+    display: none;
+}
+
+#Art1
+{
+    position: absolute;
+    height: auto;
+    width: 30vw;
+    left: -40vw;
+    top: 35vh;
+    rotate: 0deg;
+    z-index: -1;
+    display: none;
+}
+
+#Bestellen
+{
+    position: absolute;
+    top: 27vh;
+    left: 3vw;
+    rotate: -10deg;
+}
+
+#Bestellen a
+{
+   text-decoration: none;
+}
+
+#Red
+{
+    position: absolute;
+    left: -5vw;
+    top: 9vh;
+    z-index: -1;
+    display: none;
+}
+
+#Art2
+{
+    position: absolute;
+    height: auto;
+    width: 50vw;
+    left: -40vw;
+    top: 20vh;
+    rotate: 0deg;
+    z-index: -1;
+    display: none;
+}
+
+
+#Overons
+{
+    position: absolute;
+    top: 45vh;
+    left: 6vw;
+    rotate: -25deg;
+}
+
+#Overons a
+{
+   text-decoration: none;
+}
+
+#Yellow
+{
+    position: absolute;
+    left: -5vw;
+    top: 20vh;
+    rotate: 0deg;
+    z-index: -1;
+    display: none;
+}
+
+#Art3
+{
+    position: absolute;
+    height: auto;
+    width: 25vw;
+    left: -44vw;
+    top: 22vh;
+    rotate: 0deg;
+    z-index: -1;
+    display: none;
+}
+
+#Contact
+{
+    position: absolute;
+    top: 60vh;
+    left: 13vw;
+    rotate: -40deg;
+}
+
+#Contact a
+{
+   text-decoration: none;
+}
+
+#Green
+{
+    position: absolute;
+    left: 0vw;
+    top: 25vh;
+    z-index: -1;
+    display: none;
+}
+
+#Art4
+{
+    position: absolute;
+    height: auto;
+    width: 45vw;
+    left: -44vw;
+    top: 44vh;
+    rotate: 0deg;
+    z-index: -1;
+    display: none;
+}
+
+#Events
+{
+    position: absolute;
+    top: 70vh;
+    left: 21vw;
+    rotate: -55deg;
+}
+
+#Events a
+{
+   text-decoration: none;
+}
+
+#Blue
+{
+    position: absolute;
+    left: 10vw;
+    top: 30vh;
+    rotate: 0deg;
+    z-index: -1;
+    display: none;
+}
+
+#Art5
+{
+    position: absolute;
+    height: auto;
+    width: 60vw;
+    left: -45vw;
+    top: 67vh;
+    rotate: 0deg;
+    z-index: -1;
+    display: none;
 }
