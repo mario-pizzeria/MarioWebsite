@@ -58,7 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                     //Koppel pizzastatus automatisch
                     $bestelRegel_id = $pdo->lastInsertId();
-                    $status_id = 1; // Veronderstelde status_id (bijvoorbeeld: 'In voorbereiding')
+                    $status_id = 2; // Veronderstelde status_id (bijvoorbeeld: 'In voorbereiding')
                     $stmt = $pdo->prepare("INSERT INTO pizza_status (bestelRegel_id, status_id, changed_at) VALUES (?, ?, ?)");
                     $stmt->execute([$bestelRegel_id, $status_id, $datum]);
                 }
