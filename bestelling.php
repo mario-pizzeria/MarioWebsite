@@ -106,7 +106,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <li id="type1">Pizza's</li>
                 <li id="type2">Vegetarisch</li>
                 <li id="type3">Drank</li>
-                <li id="type4">Desert</li>
+                <li id="type4">Dessert</li>
             </ul>
         </div>
         
