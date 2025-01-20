@@ -1,12 +1,12 @@
 @font-face {
     font-family: 'Georgia Pro';
-    src: url(fonts/georgia-pro-cond/GeorgiaPro-Black.ttf) format('truetype');
+    src: url(GeorgiaPro-Black.ttf) format('truetype');
     font-weight: normal;
 }
 
 @font-face {
     font-family: 'Georgia Pro';
-    src: url(fonts/georgia-pro-cond/GeorgiaPro-CondSemiBoldItalic.ttf) format('truetype');
+    src: url(GeorgiaPro-CondSemiBoldItalic.ttf) format('truetype');
     font-weight: 'cond semibold italic';
 }
 
@@ -383,6 +383,8 @@
     position: absolute;
     left: -10vw;
     top: -2vh;
+    height: 50vh;
+    width: 60.4vw;
     z-index: -1;
     display: none;
 }
@@ -415,10 +417,12 @@
 #Red
 {
     position: absolute;
-    left: -5vw;
+    left: -9vw;
     top: 9vh;
     z-index: -1;
     display: none;
+    height: 50vh;
+    width: 60.4vw;
 }
 
 #Art2
@@ -450,11 +454,13 @@
 #Yellow
 {
     position: absolute;
-    left: -5vw;
-    top: 20vh;
+    left: -7vw;
+    top: 25vh;
     rotate: 0deg;
     z-index: -1;
     display: none;
+    height: 50vh;
+    width: 60.4vw;
 }
 
 #Art3
@@ -485,10 +491,13 @@
 #Green
 {
     position: absolute;
-    left: 0vw;
-    top: 25vh;
+    left: -5vw;
+    top: 28vh;
     z-index: -1;
     display: none;
+    height: 50vh;
+    width: 60.4vw;
+    rotate: -20deg;
 }
 
 #Art4
@@ -519,11 +528,13 @@
 #Blue
 {
     position: absolute;
-    left: 10vw;
-    top: 30vh;
-    rotate: 0deg;
+    left: -5vw;
+    top: 40vh;
+    rotate: -25deg;
     z-index: -1;
     display: none;
+    height: 50vh;
+    width: 70vw;
 }
 
 #Art5
