@@ -92,7 +92,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body>
     <section class="orderscreen">
         <video src="backgroundvid.mp4" muted loop autoplay></video>
-        <img class= "chefbackground" src="chef_background.png" alt="chef in the background">
+        <img class= "chefbackground" src="chefkok.png" alt="chef in the background">
         <img class="standardBackground" src="bestellen_background.png" alt="Menu background">
         <div class="backgroundhue"></div>
         <div class="line-1"></div>
